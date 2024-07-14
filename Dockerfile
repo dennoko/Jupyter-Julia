@@ -16,9 +16,8 @@ RUN sudo apt-get update
 RUN sudo apt-get install -y vim \
     git
 RUN curl -fsSL https://install.julialang.org | sh
-
-# Install Julia
-RUN 
+RUN source /home/jovyan/.bashrc \
+    source /home/jovyan/.profile
 
 # Start Jupyter Notebook
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser"]
