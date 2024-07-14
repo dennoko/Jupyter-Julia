@@ -1,0 +1,11 @@
+services:
+  service_name:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8888:8888
+    volumes:
+      - .:/mnt
+    environment:
+      - KEY=VALUE
